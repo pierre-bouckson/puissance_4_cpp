@@ -1,6 +1,13 @@
 # ==== Projet : station_meteo ====
 
-CXX       := g++
+# Détection de l'OS pour choisir le compilateur
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)      # macOS
+    CXX := clang++
+else                          # Linux & co
+    CXX := g++
+endif
+
 CXXFLAGS  := -std=c++17 -Wall -Wextra -O2 -Iinclude
 
 SRC_DIR   := src
