@@ -1,19 +1,21 @@
 # Jeux Puissance 4 en C++
 
 <p align="center">
-  <img src="Image/puissance4.png" alt="Puissance 4" width="1000"/>
+  <img src="images/menu.png" alt="Puissance 4" width="1000"/>
 </p>
 
 ## Compiler
 
-Utilisez gcc ou n'importe quel compilateur C++ :
+Le Makefile utilise par defaut gcc, il peut etre changer selon la plateforme
 
 ``` bash
-gcc puissance4.cpp -o puissance4
-./puissance4
+make all
+./build/puissance4
 ```
 
 ## Jouer
+
+Selectionner un mode de jeux `Bot` ou `2 player`
 
 Joueur 1 :
 -   `q` : se déplacer vers la gauche\
@@ -25,5 +27,11 @@ Joueur 2 :
 -   `l` : se déplacer vers la droite\
 -   `i` : valider le choix
 
+
+
+<p align="center">
+  <img src="images/game.png" alt="Puissance 4" />
+</p>
+
 Quand il y a un gagnant, utilisez **CTRL+C** pour quitter puis relancez
-`./puissance4`.
+`./build/puissance4`.
